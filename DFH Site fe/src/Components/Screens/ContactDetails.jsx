@@ -1,6 +1,5 @@
 // src/components/ContactDetails.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactDetails() {
   return (
