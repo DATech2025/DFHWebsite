@@ -78,7 +78,7 @@ import {
 	Navigate,
 } from "react-router-dom";
 // Screens
-import TopNavbar from "./components/Navbar/TopNavbar.jsx";
+import TopNavbar from "./Components/Navbar/TopNavbar.jsx";
 import Footer from "./Components/Footer.jsx";
 // import ScrollingText from "./components/Nav/ScrollingText.jsx";
 // import FloatingContactForm from "./components/Elements/FloatingContactForm.jsx";
