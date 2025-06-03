@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.unstyled-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.unstyled-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
