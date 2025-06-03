@@ -24,8 +24,6 @@ import believe from "../../assets/believe.jpeg"
 
 
 
-
-
 const Values = () => {
     const features = [
         {

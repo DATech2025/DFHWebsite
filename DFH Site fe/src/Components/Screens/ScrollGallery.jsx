@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import blm2 from "../../assets/Gallery/blm2.jpeg"
 import blm3 from "../../assets/Gallery/blm3.jpeg"
 import bloom1 from "../../assets/Gallery/bloom1.jpeg"
