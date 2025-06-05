@@ -60,12 +60,12 @@ export default function TopNavbar() {
             </Link>
           </NavItem>
           <NavItem className="list-unstyled" >
-            <Link to="/events" onClick={() => { navigate("/events"), setSidebarOpen(false) }}>
-              Events
+            <Link to="/activities" onClick={() => { navigate("/activities"), setSidebarOpen(false) }}>
+              Activities
             </Link>
           </NavItem><NavItem className="list-unstyled" >
             <Link to="/life-stories" onClick={() => { navigate("/life-stories"), setSidebarOpen(false) }}>
-              Life Stories
+             Our Life Stories
             </Link>
           </NavItem>
           <NavItem className="list-unstyled" >
@@ -75,7 +75,7 @@ export default function TopNavbar() {
           </NavItem>
           <NavItem className="list-unstyled" >
             <Link to="/testimonials" onClick={() => { navigate("/testimonials"), setSidebarOpen(false) }}>
-              Testimonials
+              Testimonials / Feedbacks
             </Link>
           </NavItem>  <NavItem className="list-unstyled" >
             <Link to="/contact" onClick={() => { navigate("/contact"), setSidebarOpen(false) }}>

@@ -69,6 +69,22 @@ import cgt16 from "../../assets/Gallery/cgt16.jpg"
 import cgt17 from "../../assets/Gallery/cgt17.jpg"
 import cgt18 from "../../assets/Gallery/cgt18.jpg"
 
+import cp1 from "../../assets/Gallery/cp1.jpg"
+import cp2 from "../../assets/Gallery/cp2.jpg"
+import cp3 from "../../assets/Gallery/cp3.jpg"
+import cp4 from "../../assets/Gallery/cp4.jpg"
+import cp5 from "../../assets/Gallery/cp5.jpg"
+import cp6 from "../../assets/Gallery/cp6.jpg"
+import cp7 from "../../assets/Gallery/cp7.jpg"
+import cp8 from "../../assets/Gallery/cp8.jpg"
+import cp9 from "../../assets/Gallery/cp9.jpg"
+import cp10 from "../../assets/Gallery/cp10.jpg"
+import cp11 from "../../assets/Gallery/cp11.jpg"
+import cp12 from "../../assets/Gallery/cp12.jpg"
+import cp13 from "../../assets/Gallery/cp13.jpg"
+import cp14 from "../../assets/Gallery/cp14.jpg"
+import cp15 from "../../assets/Gallery/cp15.jpg"
+
 import meeting1 from "../../assets/Gallery/meeting1.jpg"
 import meeting2 from "../../assets/Gallery/meeting2.jpg"
 import meeting3 from "../../assets/Gallery/meeting3.jpg"
@@ -93,13 +109,15 @@ import q7 from "../../assets/Gallery/q7.jpg"
 import q8 from "../../assets/Gallery/q8.jpg"
 import q9 from "../../assets/Gallery/q9.jpg"
 import q10 from "../../assets/Gallery/q10.jpg"
+import q11 from "../../assets/Gallery/q11.jpg"
+
 
 
 
 
 const photoData = {
   Bloom: [
-    { id: 1, src: blm2, alt: 'bloom 1' },
+    { id: 1, src: blm2, alt: 'bloom 1', title:"Bloom 2024 Women's conference" },
     { id: 2, src: bloom1, alt: 'bloom 2' },
     { id: 3, src: blm3, alt: 'bloom 3' },
     { id: 4, src: blm4, alt: 'bloom 4' },
@@ -116,7 +134,7 @@ const photoData = {
 
   ],
   Family_Retreat: [
-    { id: 1, src: fr1, alt: 'familyRetreat' },
+    { id: 1, src: fr1, alt: 'familyRetreat', title:"DFH Family retreat 2024" },
     { id: 2, src: fr2, alt: 'familyRetreat' },
     { id: 3, src: fr3, alt: 'familyRetreat' },
     { id: 4, src: fr4, alt: 'familyRetreat' },
@@ -133,7 +151,7 @@ const photoData = {
 
   ],
   Glow_Retreat: [
-    { id: 1, src: gr1, alt: 'Glow Retreat' },
+    { id: 1, src: gr1, alt: 'Glow Retreat', title:"Glow Retreat 2023" },
     { id: 2, src: gr2, alt: 'Glow Retreat' },
     { id: 3, src: gr3, alt: 'Glow Retreat' },
     { id: 4, src: gr4, alt: 'Glow Retreat' },
@@ -146,7 +164,7 @@ const photoData = {
   ],
 
   Go_Women: [
-    { id: 1, src: gowo1, alt: 'Go Women' },
+    { id: 1, src: gowo1, alt: 'Go Women', title:"'Go Woman' Women's conference 2023" },
     { id: 2, src: gowo2, alt: 'Go Women' },
     { id: 3, src: gowo3, alt: 'Go Women' },
     { id: 4, src: gowo4, alt: 'Go Women' },
@@ -160,7 +178,7 @@ const photoData = {
   ],
 
   Christmas_Gathering: [
-    { id: 1, src: cgt1, alt: 'Christmas_Gathering' },
+    { id: 1, src: cgt1, alt: 'Christmas_Gathering' , title:"Christmas Get - together" },
     { id: 2, src: cgt2, alt: 'Christmas_Gathering' },
     { id: 3, src: cgt3, alt: 'Christmas_Gathering' },
     { id: 4, src: cgt4, alt: 'Christmas_Gathering' },
@@ -181,7 +199,7 @@ const photoData = {
   ],
 
   Meeting: [
-    { id: 1, src: meeting1, alt: 'Meeting' },
+    { id: 1, src: meeting1, alt: 'Meeting', title:"Meetings" },
     { id: 2, src: meeting2, alt: 'Meeting' },
     { id: 3, src: meeting3, alt: 'Meeting' },
     { id: 4, src: meeting4, alt: 'Meeting' },
@@ -190,15 +208,33 @@ const photoData = {
     { id: 7, src: meeting7, alt: 'Meeting' },
   ],
   Prayer_Cell: [
-    { id: 1, src: pc2, alt: 'Meeting' },
+    { id: 1, src: pc2, alt: 'Meeting' , title:"Prayer Cell"},
     { id: 2, src: pc1, alt: 'Meeting' },
     { id: 3, src: pc3, alt: 'Meeting' },
     { id: 4, src: pc4, alt: 'Meeting' },
     { id: 5, src: pc5, alt: 'Meeting' },
   ],
 
+  Christmas_Gathering_2024: [
+    { id: 1, src: cp1, alt: 'Christmas_Gathering' , title:"Christmas party 2024" },
+    { id: 2, src: cp2, alt: 'Christmas_Gathering' },
+    { id: 3, src: cp3, alt: 'Christmas_Gathering' },
+    { id: 4, src: cp4, alt: 'Christmas_Gathering' },
+    { id: 5, src: cp5, alt: 'Christmas_Gathering' },
+    { id: 6, src: cp6, alt: 'Christmas_Gathering' },
+    { id: 7, src: cp7, alt: 'Christmas_Gathering' },
+    { id: 8, src: cp8, alt: 'Christmas_Gathering' },
+    { id: 9, src: cp9, alt: 'Christmas_Gathering' },
+    { id: 10, src: cp10, alt: 'Christmas_Gathering' },
+    { id: 11, src: cp11, alt: 'Christmas_Gathering' },
+    { id: 12, src: cp12, alt: 'Christmas_Gathering' },
+    { id: 13, src: cp13, alt: 'Christmas_Gathering' },
+    { id: 14, src: cp14, alt: 'Christmas_Gathering' },
+    { id: 15, src: cp15, alt: 'Christmas_Gathering' },
+  ],
+
   Quotes: [
-    { id: 1, src: q1, alt: 'Meeting' },
+    { id: 1, src: q1, alt: 'Meeting', title:"Quotes " },
     { id: 2, src: q2, alt: 'Meeting' },
     { id: 3, src: q3, alt: 'Meeting' },
     { id: 4, src: q4, alt: 'Meeting' },
@@ -208,6 +244,8 @@ const photoData = {
     { id: 8, src: q8, alt: 'Christmas_Gathering' },
     { id: 9, src: q9, alt: 'Christmas_Gathering' },
     { id: 10, src: q10, alt: 'Christmas_Gathering' },
+    { id: 11, src: q11, alt: 'Christmas_Gathering' },
+
   ],
 };
 
@@ -257,7 +295,7 @@ function ScrollGallery() {
               style={{ cursor: 'pointer', height: '200px', objectFit: 'cover' }}
               onClick={() => handleOpen(category)}
             />
-            <h5 className="mt-2">{category}</h5>
+            <h5 className="mt-2">{images[0].title}</h5>
           </div>
         ))}
       </div>

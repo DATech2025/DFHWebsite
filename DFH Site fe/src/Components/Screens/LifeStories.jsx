@@ -25,16 +25,16 @@ const workshops = [
     description:
       "Privileged to be a child of the true God. Met Christ at a crucial period of his life when he was around 14 years old. Christ filled Paul with His Holy Spirit and transformed his life (previously a failure, spiritually a weak person, withdrawn, not confident and low self esteem ) and elevated him in different facets of his life, raised him to be a testimony and enabled him to experience God’s pleasant presence, relationship and friendship in an intimate way. God has been using him since 1998 to bless and transform many. He is one of the Co-founders of this ministry. Currently married to Sharmila Ernest and living with their three kids. All credit to Christ who enables!",
   },
-//   {
-//     id: "cloud",
-//     title: "Mastering Cloud Infrastructure",
-//     instructor: "Jane Smith",
-//     date: "April 20, 2025",
-//     duration: "4 Hours",
-//     // image: workshop2,
-//     description:
-//       "Deep dive into AWS, Azure, and GCP. Learn how to deploy and scale applications effectively.",
-//   },
+  //   {
+  //     id: "cloud",
+  //     title: "Mastering Cloud Infrastructure",
+  //     instructor: "Jane Smith",
+  //     date: "April 20, 2025",
+  //     duration: "4 Hours",
+  //     // image: workshop2,
+  //     description:
+  //       "Deep dive into AWS, Azure, and GCP. Learn how to deploy and scale applications effectively.",
+  //   },
   {
     // id: "frontend",
     title: "Sharmila Ernest",
@@ -52,8 +52,8 @@ const workshops = [
     // date: "April 15, 2025",
     // duration: "3 Hours",
     image: magesh,
-    description:"“I was born and brought up in a Hindu family but in a Christian neighborhood. I had the opportunity to know Bible and Christ Jesus from my early life. I learned more about God / Jesus through self learning and attending small groups where we had the opportunity to discuss, debate and learn more about God and His word from the Bible. I believe that God loves us, but for us to truly understand God and His ways, we too should love God and follow Him and His ways in all walks of our life.”"
- },{
+    description: "“I was born and brought up in a Hindu family but in a Christian neighborhood. I had the opportunity to know Bible and Christ Jesus from my early life. I learned more about God / Jesus through self learning and attending small groups where we had the opportunity to discuss, debate and learn more about God and His word from the Bible. I believe that God loves us, but for us to truly understand God and His ways, we too should love God and follow Him and His ways in all walks of our life.”"
+  }, {
     // id: "frontend",
     title: "Aju Varghese",
     // instructor: "John Doe",
@@ -61,8 +61,9 @@ const workshops = [
     // duration: "3 Hours",
     image: Aju,
     description:
-     " “Before meeting Christ in a personal way, I remember living a life not close to God and in sin; I found myself to be a part of a wrong group of friends and had avoided even going to church. Upon meeting Christ, my life changed and the Holy Spirit of God filled me and transformed my life. I then started praying and then observed having a positive vibe in my life. God started elevating me step by step in different areas of my life and I had more of a peaceful mind. God used me to share God’s word and to worship Him more. I am married to a wonderful wife and am currently working in a bank. I feel God’s presence and leading in my life.” "},
-     {
+      " “Before meeting Christ in a personal way, I remember living a life not close to God and in sin; I found myself to be a part of a wrong group of friends and had avoided even going to church. Upon meeting Christ, my life changed and the Holy Spirit of God filled me and transformed my life. I then started praying and then observed having a positive vibe in my life. God started elevating me step by step in different areas of my life and I had more of a peaceful mind. God used me to share God’s word and to worship Him more. I am married to a wonderful wife and am currently working in a bank. I feel God’s presence and leading in my life.” "
+  },
+  {
     // id: "frontend",
     title: "Tim Jackson",
     // instructor: "John Doe",
@@ -70,7 +71,9 @@ const workshops = [
     // duration: "3 Hours",
     image: Tim,
     description:
-      " “I grew up in a very religious family. All this time I searched for God’s love and the truth. When I needed Him the most, Jesus was there to pull me out of the destructive life I was in. I was invited to a church led by the Holy Spirit of God, where I was physically healed and also set free from alchohol.The first thing the pastor said was: Jesus said ” I am the truth, the life and the way.” I had finally found the truth and the love of Christ JESUS !! “ ",
+      " “I grew up in a very religious family. All this time I searched for God’s love and the truth. When I needed Him the most, Jesus was there to pull me out of the destructive life I was in. I was invited to a church led by the Holy Spirit of God, where I was physically healed and also set free from alchohol.  ",
+    description1:
+      "The first thing the pastor said was: Jesus said ” I am the truth, the life and the way.” I had finally found the truth and the love of Christ JESUS !! “"
   },
 ];
 
@@ -105,6 +108,8 @@ const LifeStories = () => {
                 <h2>{workshop.title}</h2>
                 <h4>{workshop.instructor}</h4>
                 <p>{workshop.description}</p>
+                <p>{workshop.description1}</p>
+
                 {/* <Details>
                   <span>Date: {workshop.date}</span>
                   <span>Duration: {workshop.duration}</span>

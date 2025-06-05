@@ -20,6 +20,8 @@ import famretreat1 from "../../assets/christmas.jpeg"
 import famretreat2 from "../../assets/praiseandworship.jpeg"
 import glow from "../../assets/glow.jpeg"
 import believe from "../../assets/believe.jpeg"
+import lh from "../../assets/lh.jpg"
+
 
 
 
@@ -28,6 +30,14 @@ import believe from "../../assets/believe.jpeg"
 
 const FeatureSection = () => {
   const features = [
+    {
+      title: "You are the Lighthouse !",
+      icon: <UserOutlined />,
+      image: lh,
+      color: "#2ecc71",
+      description:
+        "Smartwave Academy offers personalized career assessment tests to individuals of all ages...",
+    },
     {
       title: "Women's Conference ",
       icon: <UserOutlined />,
@@ -114,15 +124,15 @@ const FeatureSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        OUR EVENTS
+        Upcoming events: 
       </motion.h2>
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
       >
         Upcoming events of our ministry
-      </motion.p>
+      </motion.p> */}
       <FeaturesGrid>
         {features.map((feature, index) => (
           <FeatureCard

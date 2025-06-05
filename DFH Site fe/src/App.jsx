@@ -117,7 +117,7 @@ export default function App() {
 					<Route path="/" element={<Home />}  />
 					<Route path="/home" element={<Navigate to="/" />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/events" element={<Events />} />
+					<Route path="/activities" element={<Events />} />
 					<Route path="/life-stories" element={<Stories />} />
 					<Route path="/gallery" element={<Gallery />} />
 					<Route path="/testimonials" element={<Testimonials />} />

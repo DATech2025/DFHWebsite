@@ -3,6 +3,7 @@ import { Carousel, Button } from "antd";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import heroImage from "../../assets/dfh.jpeg";
+import lighHouse from "../../assets/lighthouse2.png";
 import successIcon from "../../assets/backdrop.jpg";
 
 const HeroSection = styled(motion.div)`
@@ -20,14 +21,17 @@ const HeroSection = styled(motion.div)`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    // padding: 30px;
     column-gap: 0;
     width: 100%;
   }
+
 `;
 
 const Content = styled(motion.div)`
   max-width: 600px;
+  position: relative;  /* needed for z-index to work */
+  z-index: 9999;       /* very high to appear on top */
 
   h1 {
     font-size: 58px;
@@ -48,6 +52,11 @@ const Content = styled(motion.div)`
       font-size: 32px;
     }
   }
+
+  h3, h5 {
+    text-align : center;
+  }
+
   p {
     font-size: 18px;
     color: #333;
@@ -63,6 +72,7 @@ const Content = styled(motion.div)`
     }
   }
 `;
+
 
 const CallButton = styled(Button)`
   background: linear-gradient(135deg, #e63950, #ff6b81);
@@ -106,14 +116,23 @@ const Icon = styled.span`
 `;
 
 const ImageContainer = styled(motion.div)`
-  position: relative;
+  position: absolute;
+  width: 100%;             /* Important: ensures full width */
   max-width: 100%;
-  overflow: hidden; // Prevents images from exceeding the container
+  height: 100%;
+  overflow: hidden;        /* Prevents images from exceeding the container */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: 425) {
     width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left:90%;
   }
 `;
 
@@ -129,8 +148,10 @@ const Img = styled(motion.img)`
 
   @media (max-width: 768px) {
     max-width: 90%;
+    filter: blur(3px);
   }
 `;
+
 
 const SuccessBadge = styled(motion.div)`
   position: absolute;
@@ -173,8 +194,8 @@ const HeroSlider = () => {
       title: "Lighthouse",
       description:
         "We are a bunch of people from different walks of life used by God to love and care for people with the heart and mind of Christ. Our desire is that we would all together be instrumental in helping and supporting each other to be edified/transformed in our heart, mind, spirit and to transform the community around us to make this world a better place! Feel free to explore the other pages of this website, join us at our meetings and pray for us fervently on a regular basis."
-        
-      },
+
+    },
     // {
     //   title: "Unlock <span>Potential</span> with <span>Right Guidance</span>",
     //   description:
@@ -204,6 +225,17 @@ const HeroSlider = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 />
+
+                <motion.h3 initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}>
+                  WELCOME !
+                </motion.h3>
+                <motion.h5 initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}>
+                  Its a pleasure to have you visiting our website!
+                </motion.h5>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -226,16 +258,8 @@ const HeroSlider = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <Img src={heroImage} alt="Hero" />
-                {/* <SuccessBadge>
-                  <img
-                    src={successIcon}
-                    alt="Success"
-                    width={"20px"}
-                    height={"20px"}
-                  />{" "}
-                  100+ candidates
-                </SuccessBadge> */}
+                <Img src={lighHouse} alt="Hero" />
+
               </ImageContainer>
             </HeroSection>
           </div>
@@ -246,3 +270,15 @@ const HeroSlider = () => {
 };
 
 export default HeroSlider;
+
+
+
+{/* <SuccessBadge>
+                  <img
+                    src={successIcon}
+                    alt="Success"
+                    width={"20px"}
+                    height={"20px"}
+                  />{" "}
+                  100+ candidates
+                </SuccessBadge> */}

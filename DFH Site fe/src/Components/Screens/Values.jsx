@@ -117,8 +117,10 @@ const Values = () => {
                 {/* <div style={{marginTop:'200px'}}>
           More Events coming soon …
         </div> */}
-
             </FeaturesGrid>
+            <div className="mt-5">
+                <h5>'Lighthouse' is a project of 'Desperate for Him (Christ)' team, Canada.</h5>
+            </div>
             <div>
                 <h2 style={{color:'gray', marginTop:50}}>To know more about our partner in India, click on the link:</h2>
                 <a href="https://desperateforhim.org" style={{color:'black', textDecoration:"none", fontSize:'20px'}} target="_blank">Desperate for Him, India</a>

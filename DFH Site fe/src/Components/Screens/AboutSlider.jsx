@@ -9,9 +9,9 @@ const HeroSection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3fafa;
+  background:rgb(234, 255, 255);
   padding: 50px;
-  margin-top: 100px;
+  margin-top: 90px;
   column-gap: 10%;
   transition: all 0.3s ease-in-out;
   max-width: 100%;
@@ -30,8 +30,9 @@ const Content = styled(motion.div)`
   max-width: 600px;
 
   h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
+    margin-left:300px;
     line-height: 1.2;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -170,7 +171,7 @@ const SliderWrapper = styled.div`
 const AboutSlider = () => {
   const slides = [
     {
-      title: "About Us",
+      title: "ABOUT US",
     //   description:
     //     "We are a bunch of people from different walks of life used by God to love and care for people with the heart and mind of Christ. Our desire is that we would all together be instrumental in helping and supporting each other to be edified/transformed in our heart, mind, spirit and to transform the community around us to make this world a better place! Feel free to explore the other pages of this website, join us at our meetings and pray for us fervently on a regular basis."
         
