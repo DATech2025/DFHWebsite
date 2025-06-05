@@ -41,48 +41,48 @@ export default function TopNavbar() {
       <NavInner ref={navRef}>
         <LogoContainer onClick={() => navigate("/")}>
           <img src={LogoImg} alt="logo" height={50} width={50} />
-          <h1>Desperate for Him</h1>
+          <h1>Lighthouse</h1>
         </LogoContainer>
 
         <BurgerButton onClick={() => setSidebarOpen(!sidebarOpen)}>
           {sidebarOpen ? <FaXmark size={24} /> : <FaBars size={24} />}
         </BurgerButton>
 
-        <NavLinks open={sidebarOpen}>
-          <NavItem className="list-unstyled">
-            <Link to="/home" onClick={() => navigate("/home")}>
+        <NavLinks open={sidebarOpen} >
+          <NavItem className="list-unstyled" >
+            <Link to="/home" onClick={() => { navigate("/home"), setSidebarOpen(false) }}>
               Home
             </Link>
           </NavItem>
           <NavItem className="list-unstyled" >
-            <Link to="/about" onClick={() => navigate("/about")}>
+            <Link to="/about" onClick={() => { navigate("/about"), setSidebarOpen(false) }}>
               About Us
             </Link>
           </NavItem>
-          <NavItem className="list-unstyled">
-              <Link to="/events" onClick={() => navigate("/events")}>
-                Events
-              </Link>
-          </NavItem><NavItem className="list-unstyled">
-              <Link to="/life-stories" onClick={() => navigate("/life-stories")}>
-                Life Stories
-              </Link>
+          <NavItem className="list-unstyled" >
+            <Link to="/events" onClick={() => { navigate("/events"), setSidebarOpen(false) }}>
+              Events
+            </Link>
+          </NavItem><NavItem className="list-unstyled" >
+            <Link to="/life-stories" onClick={() => { navigate("/life-stories"), setSidebarOpen(false) }}>
+              Life Stories
+            </Link>
           </NavItem>
-          <NavItem className="list-unstyled">
-              <Link to="/gallery" onClick={() => navigate("/gallery")}>
-                Gallery
-              </Link>
-          </NavItem> 
-          <NavItem className="list-unstyled">
-              <Link to="/testimonials" onClick={() => navigate("/testimonials")}>
-                Testimonials
-              </Link>
-          </NavItem>  <NavItem className="list-unstyled">
-              <Link to="/contact" onClick={() => navigate("/contact")}>
-                Contact
-              </Link>
-          </NavItem>   
-          
+          <NavItem className="list-unstyled" >
+            <Link to="/gallery" onClick={() => { navigate("/gallery"), setSidebarOpen(false) }}>
+              Gallery
+            </Link>
+          </NavItem>
+          <NavItem className="list-unstyled" >
+            <Link to="/testimonials" onClick={() => { navigate("/testimonials"), setSidebarOpen(false) }}>
+              Testimonials
+            </Link>
+          </NavItem>  <NavItem className="list-unstyled" >
+            <Link to="/contact" onClick={() => { navigate("/contact"), setSidebarOpen(false) }}>
+              Contact
+            </Link>
+          </NavItem>
+
         </NavLinks>
 
         <ContactInfo>

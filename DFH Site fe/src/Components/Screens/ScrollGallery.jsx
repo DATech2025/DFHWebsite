@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import blm2 from "../../assets/Gallery/blm2.jpeg"
 import blm3 from "../../assets/Gallery/blm3.jpeg"
 import bloom1 from "../../assets/Gallery/bloom1.jpeg"
@@ -108,10 +108,10 @@ const photoData = {
     { id: 7, src: blm7, alt: 'bloom 7' },
     { id: 8, src: blm8, alt: 'bloom 8' },
     { id: 9, src: blm9, alt: 'bloom 9' },
-    { id: 10, src: blm10, alt:'bloom 10' },
-    { id: 11, src: blm11, alt:'bloom 11' },
-    { id: 12, src: blm12, alt:'bloom 12' },
-    { id: 13, src: blm13, alt:'bloom 13' },
+    { id: 10, src: blm10, alt: 'bloom 10' },
+    { id: 11, src: blm11, alt: 'bloom 11' },
+    { id: 12, src: blm12, alt: 'bloom 12' },
+    { id: 13, src: blm13, alt: 'bloom 13' },
 
 
   ],
@@ -130,7 +130,7 @@ const photoData = {
     { id: 12, src: fr12, alt: 'familyRetreat' },
     { id: 13, src: fr13, alt: 'familyRetreat' },
 
-    
+
   ],
   Glow_Retreat: [
     { id: 1, src: gr1, alt: 'Glow Retreat' },
@@ -214,7 +214,35 @@ const photoData = {
 function ScrollGallery() {
   const [openCategory, setOpenCategory] = useState(null);
 
-  const handleClose = () => setOpenCategory(null);
+  // const handleClose = () => setOpenCategory(null);
+
+  // Open modal and push to history
+  const handleOpen = (category) => {
+    setOpenCategory(category);
+    window.history.pushState({ isModal: true }, '');
+  };
+
+  // Close modal
+  const handleClose = () => {
+    setOpenCategory(null);
+    if (window.history.state?.isModal) {
+      window.history.back();
+    }
+  };
+
+  // Handle back button (popstate)
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (openCategory) {
+        setOpenCategory(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [openCategory]);
 
   return (
     <div className="container py-4">
@@ -227,7 +255,7 @@ function ScrollGallery() {
               alt={images[0].alt}
               className="img-thumbnail"
               style={{ cursor: 'pointer', height: '200px', objectFit: 'cover' }}
-              onClick={() => setOpenCategory(category)}
+              onClick={() => handleOpen(category)}
             />
             <h5 className="mt-2">{category}</h5>
           </div>

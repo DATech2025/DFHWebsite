@@ -84,43 +84,17 @@ const Webinars = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Our Regular events and year schedule:
+        {/* Our Regular events and year schedule: */}
+        Activities we conduct :
       </motion.h1>
-      <WebinarGrid>
-        {webinars.map((webinar, index) => (
-          <motion.div
-            key={webinar.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-          >
-            <WebinarCard>
-              {/* <WebinarImage> */}
-                {/* <img src={webinar.image} alt={webinar.title} /> */}
-              {/* </WebinarImage> */}
-              <WebinarContent>
-                {/* <Icon>{webinar.icon}</Icon> */}
-                <h2 className="text-center">{webinar.title}</h2>
-                <h4>{webinar.speaker}</h4>
-                <p>{webinar.description}</p>
-                <h5>
-                  Date: {webinar.date} | Time: {webinar.time}
-                </h5>
-                <h5>
-                  Venue : {webinar.venue} 
-                </h5>
-                <h5>
-                    {webinar.details}
-                </h5>
-                {/* <RegisterButton href={webinar.registerLink}>
-                  Register Now
-                </RegisterButton> */}
-              </WebinarContent>
-            </WebinarCard>
-          </motion.div>
-        ))}
-      </WebinarGrid>
+      <motion.h3
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+          
+      (Please feel free to contact us to know more about these, to participate and support us.)
+      </motion.h3>
       <WebinarGrid>
           <motion.div
             // key={webinar.id}
@@ -135,19 +109,19 @@ const Webinars = () => {
               {/* </WebinarImage> */}
               <WebinarContent>
                 {/* <Icon>{webinar.icon}</Icon> */}
-                <h2 className="text-center">Activities we conduct:</h2>
+                {/* <h2 className="text-center">Activities we conduct:</h2> */}
                 <ul className="text-center list-unstyled p-2">
-                  <li><h4>House prayer cells- weekly</h4></li>
-                  <li><h4>Praise and Worship evenings</h4></li>
-                  <li><h4>Spiritual Retreats </h4></li>
-                  <li><h4>‘Go Woman’ conferences for women</h4></li>
-                  <li><h4>Leadership training.</h4></li>
-                  <li><h4>Intercessory prayers.</h4></li>
-                  <li><h4>Youth ministry</h4></li>
-                  <li><h4>Children Ministry</h4></li>
-                  <li><h4>Visiting preacher to strengthen believers/churches.</h4></li>
-                  <li><h4>Outreach programs</h4></li>
-                  <li><h4>Literature and media ministry</h4></li>
+                  <li><h3>House prayer cells- weekly  </h3></li>
+                  <li><h3>Praise and Worship evenings </h3></li>
+                  <li><h3>Spiritual Retreats          </h3></li>
+                  <li><h3>‘Go Woman’ conferences for women</h3></li>
+                  <li><h3>Leadership training.</h3></li>
+                  <li><h3>Intercessory prayers.</h3></li>
+                  <li><h3>Youth ministry</h3></li>
+                  <li><h3>Children Ministry</h3></li>
+                  <li><h3>Visiting preacher to strengthen believers/churches.</h3></li>
+                  <li><h3>Outreach programs</h3></li>
+                  <li><h3>Literature and media ministry</h3></li>
                 </ul>
                 {/* <h4>{webinar.speaker}</h4>
                 <p>{webinar.description}</p>
@@ -260,3 +234,42 @@ const RegisterButton = styled.a`
     background: #e06b1d;
   }
 `;
+
+
+
+
+      // <WebinarGrid>
+      //   {webinars.map((webinar, index) => (
+      //     <motion.div
+      //       key={webinar.id}
+      //       initial={{ opacity: 0, y: 50 }}
+      //       whileInView={{ opacity: 1, y: 0 }}  
+      //       transition={{ duration: 0.6, delay: index * 0.2 }}
+      //       viewport={{ once: true }}
+      //     >
+      //       <WebinarCard>
+      //         {/* <WebinarImage> */}
+      //           {/* <img src={webinar.image} alt={webinar.title} /> */}
+      //         {/* </WebinarImage> */}
+      //         <WebinarContent>
+      //           {/* <Icon>{webinar.icon}</Icon> */}
+      //           <h2 className="text-center">{webinar.title}</h2>
+      //           <h4>{webinar.speaker}</h4>
+      //           <p>{webinar.description}</p>
+      //           <h5>
+      //             Date: {webinar.date} | Time: {webinar.time}
+      //           </h5>
+      //           <h5>
+      //             Venue : {webinar.venue} 
+      //           </h5>
+      //           <h5>
+      //               {webinar.details}
+      //           </h5>
+      //           {/* <RegisterButton href={webinar.registerLink}>
+      //             Register Now
+      //           </RegisterButton> */}
+      //         </WebinarContent>
+      //       </WebinarCard>
+      //     </motion.div>
+      //   ))}
+      // </WebinarGrid>

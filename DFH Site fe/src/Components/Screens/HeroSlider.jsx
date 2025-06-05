@@ -32,6 +32,7 @@ const Content = styled(motion.div)`
   h1 {
     font-size: 58px;
     font-weight: bold;
+    text-align: center;
     line-height: 1.2;
     transition: transform 0.3s ease-in-out;
 
@@ -169,7 +170,7 @@ const SliderWrapper = styled.div`
 const HeroSlider = () => {
   const slides = [
     {
-      title: "Desperate for <span>Him</span> Ministries",
+      title: "Lighthouse",
       description:
         "We are a bunch of people from different walks of life used by God to love and care for people with the heart and mind of Christ. Our desire is that we would all together be instrumental in helping and supporting each other to be edified/transformed in our heart, mind, spirit and to transform the community around us to make this world a better place! Feel free to explore the other pages of this website, join us at our meetings and pray for us fervently on a regular basis."
         
