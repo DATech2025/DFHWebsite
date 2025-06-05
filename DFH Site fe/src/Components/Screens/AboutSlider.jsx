@@ -47,6 +47,11 @@ const Content = styled(motion.div)`
 
     @media (max-width: 768px) {
       font-size: 32px;
+      margin-left:0px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left:0px;
     }
   }
   p {

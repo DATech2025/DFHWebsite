@@ -1,120 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Card } from "antd";
-import {
-  UserOutlined,
-  GlobalOutlined,
-  SafetyOutlined,
-  StarOutlined,
-  TeamOutlined,
-  BookOutlined,
-} from "@ant-design/icons";
+import { Card, Modal } from "antd";
 import { motion } from "framer-motion";
-import Confrence from "../../assets/Confrence.jpeg"
-import Schedule1 from "../../assets/schedule1.jpg"
-import Schedule2 from "../../assets/schedule2.jpg"
-import lighthouse from "../../assets/lighthouse.jpg"
-import gowomen from "../../assets/gowomen.jpg"
-import famretreat from "../../assets/pic6.jpeg"
-import famretreat1 from "../../assets/christmas.jpeg"
-import famretreat2 from "../../assets/praiseandworship.jpeg"
-import glow from "../../assets/glow.jpeg"
-import believe from "../../assets/believe.jpeg"
-import lh from "../../assets/lh.jpg"
 
-
-
-
-
-
+// Image imports
+import Confrence from "../../assets/Confrence.jpeg";
+import Schedule1 from "../../assets/schedule1.jpg";
+import Schedule2 from "../../assets/schedule2.jpg";
+import lighthouse from "../../assets/lighthouse.jpg";
+import gowomen from "../../assets/gowomen.jpg";
+import famretreat from "../../assets/pic6.jpeg";
+import famretreat1 from "../../assets/christmas.jpeg";
+import famretreat2 from "../../assets/praiseandworship.jpeg";
+import glow from "../../assets/glow.jpeg";
+import believe from "../../assets/believe.jpeg";
+import lh from "../../assets/lh.jpg";
 
 const FeatureSection = () => {
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const features = [
     {
       title: "You are the Lighthouse !",
-      icon: <UserOutlined />,
       image: lh,
-      color: "#2ecc71",
-      description:
-        "Smartwave Academy offers personalized career assessment tests to individuals of all ages...",
     },
     {
       title: "Women's Conference ",
-      icon: <UserOutlined />,
       image: Confrence,
-      color: "#2ecc71",
-      description:
-        "Smartwave Academy offers personalized career assessment tests to individuals of all ages...",
     },
     {
       title: "Schedule - 2024",
-      icon: <GlobalOutlined />,
       image: Schedule1,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
     },
     {
       title: "Schedule - 2023",
-      icon: <GlobalOutlined />,
       image: Schedule2,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
-    }, {
+    },
+    {
       title: "Light House",
-      icon: <GlobalOutlined />,
       image: lighthouse,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
-    }, {
+    },
+    {
       title: "Go Women",
-      icon: <GlobalOutlined />,
       image: gowomen,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
-    }, {
+    },
+    {
       title: "Family Retreat - 2024",
-      icon: <GlobalOutlined />,
       image: famretreat,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
     },
     {
       title: "Christmas Party - 2024",
-      icon: <GlobalOutlined />,
       image: famretreat1,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
-    }, {
+    },
+    {
       title: "Praise and Worship - 2024",
-      icon: <GlobalOutlined />,
       image: famretreat2,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
     },
     {
       title: "Glow",
-      icon: <GlobalOutlined />,
       image: glow,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
-    }, {
-      title: "How not to Believe",
-      icon: <GlobalOutlined />,
-      image: believe,
-      color: "#e74c3c",
-      description:
-        "Navigating the complexities of studying abroad is made easy with Smartwave Academy...",
     },
-    
-    
+    {
+      title: "How not to Believe",
+      image: believe,
+    },
   ];
 
   return (
@@ -124,15 +74,9 @@ const FeatureSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Upcoming events: 
+        Upcoming events:
       </motion.h2>
-      {/* <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-      >
-        Upcoming events of our ministry
-      </motion.p> */}
+
       <FeaturesGrid>
         {features.map((feature, index) => (
           <FeatureCard
@@ -145,24 +89,47 @@ const FeatureSection = () => {
               boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
             }}
           >
-            {/* <IconContainer style={{ color: feature.color }}>
-              
-              <img src={feature.image} alt="" />
-            </IconContainer> */}
             <CardTitle>{feature.title}</CardTitle>
-            {/* <Description>{feature.description}</Description> */}
-            <img src={feature.image} alt="" className="imggrid" />
+            <img
+              src={feature.image}
+              alt={feature.title}
+              className="imggrid"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "8px",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                setSelectedImage(feature.image);
+                setPreviewVisible(true);
+              }}
+            />
           </FeatureCard>
         ))}
 
-        <div style={{marginTop:'200px'}}>
-          More Events coming soon …
-        </div>
-
+        <div style={{ marginTop: "200px" }}>More Events coming soon …</div>
       </FeaturesGrid>
+
+      {/* Modal for image preview */}
+      <Modal
+        open={previewVisible}
+        footer={null}
+        onCancel={() => setPreviewVisible(false)}
+        centered
+        width={800}
+      >
+        <img
+          alt="Preview"
+          src={selectedImage}
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
+      </Modal>
     </SectionContainer>
   );
 };
+
+/* ---------- Styled Components ---------- */
 
 const SectionContainer = styled.div`
   text-align: center;
@@ -174,50 +141,29 @@ const SectionContainer = styled.div`
     font-weight: bold;
     margin-bottom: 10px;
   }
+`;
 
-  p {
-    font-size: 16px;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 40px;
+const FeaturesGrid = styled.div`
+ @media (min-width:425px){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    justify-content: center;
+ }
+
+  @media (max-width:425px){
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    justify-content: center;
   }
 `;
 
-// const FeaturesGrid = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 20px;
-//   justify-items: center;
-//   justify-content: center;
-// `;
-
-// const FeatureCard = styled(motion(Card))`
-//   width: 100%;
-//   max-width: 320px;
-//   min-width: 250px;
-//   border-radius: 12px;
-//   background: white;
-//   padding: 20px;
-//   text-align: center;
-//   transition: all 0.3s ease-in-out;
-//   cursor: pointer;
-// `;
-
-const FeaturesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 20px;
-  justify-content: center;
-`;
-
 const FeatureCard = styled(motion(Card))`
-  
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
 `;
-
-// const IconContainer = styled.div`
-//   font-size: 28px;
-//   margin-bottom: 12px;
-// `;
 
 const CardTitle = styled.h3`
   font-size: 18px;
@@ -225,9 +171,12 @@ const CardTitle = styled.h3`
   margin-bottom: 10px;
 `;
 
-// const Description = styled.p`
-//   font-size: 14px;
-//   color: #666;
-// `;
+/* Optional: Add smooth hover effect for the image */
+const ImgGrid = styled.img`
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+`;
 
 export default FeatureSection;
