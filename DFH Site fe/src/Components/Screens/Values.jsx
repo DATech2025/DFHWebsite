@@ -119,11 +119,11 @@ const Values = () => {
         </div> */}
             </FeaturesGrid>
             <div className="mt-5">
-                <h5>'Lighthouse' is a project of 'Desperate for Him (Christ)' team, Canada.</h5>
+                <h4>'Lighthouse' is a project of 'Desperate for Him (Christ)' team, Canada.</h4>
             </div>
             <div>
-                <h2 style={{color:'gray', marginTop:50}}>To know more about our partner in India, click on the link:</h2>
-                <a href="https://desperateforhim.org" style={{color:'black', textDecoration:"none", fontSize:'20px'}} target="_blank">Desperate for Him, India</a>
+                <h6 style={{color:'gray', marginTop:50}}>To know more about our partner in India, click on the link:</h6>
+                <a href="https://desperateforhim.org" style={{color:'black', textDecoration:"none", fontSize:'20px'}} target="_blank"><h6>Desperate for Him, India</h6></a>
             </div>
         </SectionContainer>
 
