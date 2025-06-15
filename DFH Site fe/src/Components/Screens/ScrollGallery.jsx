@@ -98,6 +98,11 @@ import pc2 from "../../assets/Gallery/pc2.jpeg"
 import pc3 from "../../assets/Gallery/pc3.jpg"
 import pc4 from "../../assets/Gallery/pc4.jpg"
 import pc5 from "../../assets/Gallery/pc5.jpg"
+import pc6 from "../../assets/Gallery/pc6.jpg"
+import pc7 from "../../assets/Gallery/pc7.jpg"
+import pc8 from "../../assets/Gallery/pc8.jpg"
+import pc9 from "../../assets/Gallery/pc9.jpg"
+
 
 import q1 from "../../assets/Gallery/q1.jpeg"
 import q2 from "../../assets/Gallery/q2.jpeg"
@@ -110,6 +115,8 @@ import q8 from "../../assets/Gallery/q8.jpg"
 import q9 from "../../assets/Gallery/q9.jpg"
 import q10 from "../../assets/Gallery/q10.jpg"
 import q11 from "../../assets/Gallery/q11.jpg"
+import q12 from "../../assets/Gallery/q12.jpg"
+
 
 
 
@@ -213,6 +220,12 @@ const photoData = {
     { id: 3, src: pc3, alt: 'Meeting' },
     { id: 4, src: pc4, alt: 'Meeting' },
     { id: 5, src: pc5, alt: 'Meeting' },
+    { id: 6, src: pc6, alt: 'Meeting' },
+    { id: 7, src: pc7, alt: 'Meeting' },
+    { id: 8, src: pc8, alt: 'Meeting' },
+    { id: 9, src: pc9, alt: 'Meeting' },
+
+
   ],
 
   Christmas_Gathering_2024: [
@@ -245,6 +258,8 @@ const photoData = {
     { id: 9, src: q9, alt: 'Christmas_Gathering' },
     { id: 10, src: q10, alt: 'Christmas_Gathering' },
     { id: 11, src: q11, alt: 'Christmas_Gathering' },
+    { id: 12, src: q12, alt: 'Q1' },
+
 
   ],
 };
