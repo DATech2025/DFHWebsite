@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import bloom1 from "../../assets/Gallery/bloom1.jpeg"
 import ScrollGallery from "./ScrollGallery";
 
-const hackathons = [
-    {
-        id: 1,
-        image: bloom1,
-    },
-];
 
 const GalleryImages = () => {
     return (

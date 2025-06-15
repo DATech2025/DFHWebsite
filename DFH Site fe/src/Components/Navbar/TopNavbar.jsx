@@ -49,35 +49,35 @@ export default function TopNavbar() {
         </BurgerButton>
 
         <NavLinks open={sidebarOpen} >
-          <NavItem className="list-unstyled" >
+          <NavItem className="list-unstyled" onClick={() => { navigate("/home"), setSidebarOpen(false) }} >
             <Link to="/home" onClick={() => { navigate("/home"), setSidebarOpen(false) }}>
               Home
             </Link>
           </NavItem>
-          <NavItem className="list-unstyled" >
+          <NavItem className="list-unstyled" onClick={() => { navigate("/about"), setSidebarOpen(false) }}>
             <Link to="/about" onClick={() => { navigate("/about"), setSidebarOpen(false) }}>
               About Us
             </Link>
           </NavItem>
-          <NavItem className="list-unstyled" >
+          <NavItem className="list-unstyled" onClick={() => { navigate("/activities"), setSidebarOpen(false) }} >
             <Link to="/activities" onClick={() => { navigate("/activities"), setSidebarOpen(false) }}>
               Activities
             </Link>
-          </NavItem><NavItem className="list-unstyled" >
+          </NavItem><NavItem className="list-unstyled" onClick={() => { navigate("/life-stories"), setSidebarOpen(false) }} >
             <Link to="/life-stories" onClick={() => { navigate("/life-stories"), setSidebarOpen(false) }}>
              Our Life Stories
             </Link>
           </NavItem>
-          <NavItem className="list-unstyled" >
+          <NavItem className="list-unstyled" onClick={() => { navigate("/gallery"), setSidebarOpen(false) }} >
             <Link to="/gallery" onClick={() => { navigate("/gallery"), setSidebarOpen(false) }}>
               Gallery
             </Link>
           </NavItem>
-          <NavItem className="list-unstyled" >
+          <NavItem className="list-unstyled" onClick={() => { navigate("/testimonials"), setSidebarOpen(false) }}>
             <Link to="/testimonials" onClick={() => { navigate("/testimonials"), setSidebarOpen(false) }}>
               Testimonials / Feedbacks
             </Link>
-          </NavItem>  <NavItem className="list-unstyled" >
+          </NavItem>  <NavItem className="list-unstyled" onClick={() => { navigate("/contact"), setSidebarOpen(false) }} >
             <Link to="/contact" onClick={() => { navigate("/contact"), setSidebarOpen(false) }}>
               Contact
             </Link>

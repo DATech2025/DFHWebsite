@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import heroImage from "../../assets/dfh.jpeg";
 import successIcon from "../../assets/backdrop.jpg";
+import lighHouse from "../../assets/lighthouse2.png";
 
 const HeroSection = styled(motion.div)`
   display: flex;
@@ -242,6 +243,7 @@ const AboutSlider = () => {
                   />{" "}
                   {/* 100+ candidates */}
                 </SuccessBadge>
+
               </ImageContainer>
             </HeroSection>
           </div>
