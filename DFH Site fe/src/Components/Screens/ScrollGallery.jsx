@@ -116,6 +116,8 @@ import q9 from "../../assets/Gallery/q9.jpg"
 import q10 from "../../assets/Gallery/q10.jpg"
 import q11 from "../../assets/Gallery/q11.jpg"
 import q12 from "../../assets/Gallery/q12.jpg"
+import q13 from "../../assets/Gallery/q13.png"
+
 
 
 
@@ -259,6 +261,8 @@ const photoData = {
     { id: 10, src: q10, alt: 'Christmas_Gathering' },
     { id: 11, src: q11, alt: 'Christmas_Gathering' },
     { id: 12, src: q12, alt: 'Q1' },
+    { id: 13, src: q13, alt: 'Q2' },
+
 
 
   ],
